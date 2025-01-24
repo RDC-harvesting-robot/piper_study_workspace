@@ -140,10 +140,10 @@
       <wall_time>1634977569 931026499</wall_time>
       <iterations>39838</iterations>
       <model name='bowl'>
-        <pose frame=''>-0.3 0.5 1.015 0 -0 0.275846</pose>
+        <pose frame=''>-0.2 0.4 1.015 0 -0 0.275846</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-0.3 0.5 1.015 0 -0 0.275846</pose>
+          <pose frame=''>-0.2 0.4 1.015 0 -0 0.275846</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>-0 0 19.6 -3e-06 -1e-06 -0</acceleration>
           <wrench>-0 0 1.96 0 -0 0</wrench>
@@ -180,10 +180,10 @@
         </link>
       </model>
       <model name='unit_box_blue'>
-        <pose frame=''>0.299999 0.5 1.04493 -1e-06 -2e-05 1e-06</pose>
+        <pose frame=''>0.2 0.4 1.04493 -1e-06 -2e-05 1e-06</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>0.299999 0.5 1.04493 -1e-06 -2e-05 1e-06</pose>
+          <pose frame=''>0.2 0.4 1.04493 -1e-06 -2e-05 1e-06</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
