@@ -14,7 +14,7 @@ controller_list:
       - joint7
       - joint8
 initial:  # Define initial robot poses per group
-#  - group: arm
-#    pose: home
-
-  []
+  - group: arm
+    pose: home
+  - group: gripper
+    pose: open

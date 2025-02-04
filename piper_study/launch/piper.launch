@@ -7,8 +7,8 @@
   <arg name="gazebo_gui" default="true" doc="Start Gazebo GUI"/>
   <arg name="paused" default="false" doc="Start Gazebo paused"/>
   <!--arg name="world_name" default="worlds/empty.world" doc="Gazebo world file"/-->
-  <arg name="world_name" default="$(find piper_study)/worlds/pick_and_place.world"/>
-  <arg name="world_pose" default="-x 0 -y 0.05 -z 1.2 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
+  <arg name="world_name" default="$(find piper_study)/worlds/piper_study.world"/>
+  <arg name="world_pose" default="-x 0 -y 0.05 -z 1.21 -R 0 -P 0 -Y 1.57" doc="Pose to spawn the robot at"/>
 
   <!-- Launch Gazebo and spawn the robot -->
   <include file="$(find piper_moveit_config)/launch/gazebo.launch" pass_all_args="true"/>

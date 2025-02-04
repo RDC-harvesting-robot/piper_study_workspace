@@ -428,15 +428,20 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <max_contacts>30</max_contacts>
+      <origin xyz="0 -0.03 -0.005" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://piper_description/meshes/link7.STL" />
+        <box size="0.10 0.07 0.01" />
       </geometry>
     </collision>
   </link>
+  <gazebo reference="link7">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
   <joint
     name="joint7"
     type="prismatic">
@@ -452,7 +457,7 @@
     <limit
       lower="0"
       upper="0.04"
-      effort="10"
+      effort="100"
       velocity="1" />
   </joint>
   <link
@@ -486,15 +491,20 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <max_contacts>30</max_contacts>
+      <origin xyz="0 0.03 -0.005" rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://piper_description/meshes/link8.STL" />
+        <box size="0.10 0.07 0.01" />
       </geometry>
     </collision>
   </link>
+  <gazebo reference="link8">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <mu1>100000</mu1>
+    <mu2>100000</mu2>
+    <kp>100000000.0</kp>
+    <kd>1.0</kd>
+  </gazebo>
   <joint
     name="joint8"
     type="prismatic">
@@ -510,9 +520,16 @@
     <limit
       lower="-0.04"
       upper="0"
-      effort="10"
+      effort="100"
       velocity="1" />
   </joint>
+  <gazebo>
+    <plugin filename="libgazebo_mimic_joint_plugin.so" name="mimic_joint7_to_joint8">
+      <joint>joint7</joint>
+      <mimicJoint>joint8</mimicJoint> 
+      <multiplier>-1.0</multiplier>
+    </plugin>
+  </gazebo>
 
 <!-- controller -->
   <xacro:macro name="transmission_block" params="tran_name joint_name motor_name">
