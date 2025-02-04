@@ -12,7 +12,6 @@ controller_list:
     type: $(arg fake_execution_type)
     joints:
       - joint7
-      - joint8
 initial:  # Define initial robot poses per group
   - group: arm
     pose: home

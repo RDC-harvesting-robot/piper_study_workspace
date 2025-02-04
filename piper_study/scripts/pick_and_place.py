@@ -28,7 +28,7 @@ if __name__ == "__main__":
     target_pose1 = copy.deepcopy(current_pose)
     target_pose1.position.x += 0.29
     target_pose1.position.y -= 0.2
-    target_pose1.position.z -= 0.15
+    target_pose1.position.z -= 0.14
     target_pose1.orientation = target_pose1.orientation.__class__(
         *quaternion_multiply(
             [current_pose.orientation.x, current_pose.orientation.y, current_pose.orientation.z, current_pose.orientation.w],
@@ -47,12 +47,12 @@ if __name__ == "__main__":
     move_group_gripper.clear_pose_targets()
 
     # 3. Move the TCP close to the object
-    target_pose1.position.z -= 0.05
+    target_pose1.position.z -= 0.10
     move_group_arm.set_pose_target(target_pose1)
     move_group_arm.go(wait=True)
     move_group_arm.stop()
     move_group_arm.clear_pose_targets()
-    
+
     # 4. Close the gripper
     move_group_gripper.set_named_target("closed")
     move_group_gripper.go(wait=True)

@@ -27,9 +27,7 @@
     </group>
     <group name="gripper">
         <link name="link7"/>
-        <link name="link8"/>
         <joint name="joint7"/>
-        <joint name="joint8"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="home" group="arm">
@@ -42,14 +40,16 @@
     </group_state>
     <group_state name="open" group="gripper">
         <joint name="joint7" value="0.04"/>
-        <joint name="joint8" value="-0.04"/>
     </group_state>
     <group_state name="closed" group="gripper">
-        <joint name="joint7" value="0"/>
-        <joint name="joint8" value="0"/>
+        <joint name="joint7" value="0.03"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="gripper" parent_link="link6" group="gripper" parent_group="arm"/>
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>
+    <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
+    <passive_joint name="joint8"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="base_link" link2="link1" reason="Adjacent"/>
     <disable_collisions link1="base_link" link2="link2" reason="Never"/>

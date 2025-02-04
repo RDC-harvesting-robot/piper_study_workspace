@@ -222,5 +222,3 @@ gripper:
     - AITstar
     - ABITstar
     - BITstar
-  projection_evaluator: joints(joint7,joint8)
-  longest_valid_segment_fraction: 0.005

@@ -16,4 +16,3 @@ controller_list:
     default: True
     joints:
       - joint7
-      - joint8
