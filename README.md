@@ -36,3 +36,13 @@ source devel/setup.bash
 ```
 roslaunch realsense2_description view_d435_model_rviz_gazebo.launch
 ```
+
+## Pick and place
+```
+roslaunch piper_study piper.launch
+rosrun piper_study pick_and_place.py
+```
+
+[![IMAGE](http://img.youtube.com/vi/YjJ5OTspTGY/0.jpg)](https://youtu.be/YjJ5OTspTGY)
+
+
