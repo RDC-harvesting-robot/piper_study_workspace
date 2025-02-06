@@ -45,4 +45,9 @@ rosrun piper_study pick_and_place.py
 
 [![IMAGE](http://img.youtube.com/vi/YjJ5OTspTGY/0.jpg)](https://youtu.be/YjJ5OTspTGY)
 
-
+## RealSense
+```
+roslaunch piper_study piper_with_realsense.launch
+rosrun piper_study pick_and_place.py
+```
+[![IMAGE](http://img.youtube.com/vi/PtiYimLzAR0/0.jpg)](https://youtu.be/PtiYimLzAR0)
