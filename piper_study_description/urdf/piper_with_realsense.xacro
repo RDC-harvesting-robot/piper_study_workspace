@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<robot name="piper" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Include Arm Description -->
+  <xacro:include filename="$(find piper_study_description)/urdf/piper_description.xacro"/>
+
+  <!-- Include Realsense Camera Description -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+
+  <!-- Define Arguments -->
+  <xacro:arg name="name" default="camera" />
+  <xacro:arg name="topics_ns" default="camera" />
+  <xacro:arg name="use_nominal_extrinsics" default="false" />
+  <xacro:arg name="publish_pointcloud" default="true" />
+  <xacro:arg name="add_plug" default="false" />
+
+  <!-- Camera Mounted on Arm -->
+  <xacro:sensor_d435i name="$(arg name)"
+                      topics_ns="$(arg topics_ns)"
+                      parent="world"
+                      use_nominal_extrinsics="$(arg use_nominal_extrinsics)"
+                      publish_pointcloud="$(arg publish_pointcloud)"
+                      add_plug="$(arg add_plug)">
+    <origin xyz="0 0.0 1" rpy="0 1.25 0"/>
+  </xacro:sensor_d435i>
+
+</robot>
