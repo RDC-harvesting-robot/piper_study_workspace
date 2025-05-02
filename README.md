@@ -9,7 +9,7 @@ ROS noetic (Ubuntu20.04)
 ```
 cd ~/catkin_ws/src/
 git clone https://github.com/open-rdc/Piper_ros
-git clone https://github.com/yasuohayashibara/piper_study_workspace
+git clone https://github.com/RDC-harvesting-robot/piper_study_workspace
 cd ~/catkin_ws/
 catkin build
 source ~/catkin_ws/devel/setup.bash
