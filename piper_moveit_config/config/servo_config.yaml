@@ -1,0 +1,13 @@
+moveit_servo:
+  planning_frame: base_link
+  ee_frame_name: tool0  # <- URDFで定義された手先のリンク名に合わせて変更
+  cartesian_command_in_topic: /servo_server/delta_twist_cmds
+  joint_command_out_topic: /servo_server/joint_commands
+  publish_period: 0.01  # 100Hz
+  scale:
+    linear: 0.2
+    rotational: 0.5
+  incoming_command_timeout: 0.1
+  use_gazebo: false
+  use_collision_check: false
+  command_out_type: joint_velocity

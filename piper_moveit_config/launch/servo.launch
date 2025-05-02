@@ -1,0 +1,15 @@
+<launch>
+  <!-- Load robot description -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find piper_description)/urdf/piper.urdf.xacro'" />
+
+  <!-- MoveIt -->
+  <include file="$(find piper_moveit_config)/launch/move_group.launch" />
+
+  <!-- RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find piper_moveit_config)/launch/moveit.rviz" />
+
+  <!-- MoveIt Servo Node -->
+  <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen">
+    <rosparam command="load" file="$(find piper_moveit_config)/config/servo_config.yaml" />
+  </node>
+</launch>
